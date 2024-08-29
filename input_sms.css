@@ -20,8 +20,7 @@
     }
     .verification-code-container .input {
         background-color: #fff;
-        position: relative;
-        color: black;
+        color: black; /* Matn rangini qora qilib qo'ydik */
     }
 }
 @media (min-width: 768px) {
@@ -42,6 +41,7 @@
     }
     .verification-code-container .input {
         background-color: rgb(48, 69, 90);
+        color: #fff; /* Matn rangini oq qilib qo'ydik */
     }
 }
 body {
@@ -69,7 +69,7 @@ body {
     height: 53px;
     text-align: center;
     font-size: 18px;
-    color: #fff;
+    color: #fff; /* Matn rangini oq qilib qo'ydik */
     border: 2px solid rgb(23, 33, 43);
     border-radius: 8px;
     outline: none;
