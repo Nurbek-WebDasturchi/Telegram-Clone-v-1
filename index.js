@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     ];
 
     // Tugmalarni olish
-    const buttons = document.querySelectorAll('button');
+    const buttons = document.querySelectorAll('.row button');
 
     // Faol input maydonini kuzatish uchun o'zgaruvchi
     let activeInputIndex = 0;
@@ -22,6 +22,9 @@ document.addEventListener("DOMContentLoaded", function() {
             if (activeInputIndex < inputs.length) {
                 inputs[activeInputIndex].value = number; // Faol input maydoniga raqamni yozish
                 activeInputIndex++; // Keyingi input maydoniga o'tish
+                if (activeInputIndex < inputs.length) {
+                    inputs[activeInputIndex].focus(); // Keyingi inputga fokus o'tkazish
+                }
             }
         });
     });
