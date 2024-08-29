@@ -53,5 +53,25 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+        // Faqat mobil qurilmalarda inputlarni readonly qilish
+    if (window.innerWidth <= 767) {
+        inputs.forEach(input => {
+            input.setAttribute('readonly', true);
+        });
+    }
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function () {
+            const number = this.textContent.trim(); // Tugmaning matnini olish va ortiqcha bo'shliqlarni olib tashlash
+
+            if (activeInputIndex < inputs.length) {
+                inputs[activeInputIndex].value = number; // Faol input maydoniga raqamni yozish
+                activeInputIndex++; // Keyingi input maydoniga o'tish
+                if (activeInputIndex < inputs.length) {
+                    inputs[activeInputIndex].focus(); // Keyingi inputga fokus o'tkazish
+                }
+            }
+        });
+    });
 });
 
