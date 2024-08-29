@@ -21,6 +21,7 @@
     .verification-code-container .input {
         background-color: #fff;
         position: relative;
+        color: black;
     }
 }
 @media (min-width: 768px) {
