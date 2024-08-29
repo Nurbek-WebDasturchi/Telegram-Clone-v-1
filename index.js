@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     ];
 
     // Tugmalarni olish
-    const buttons = document.querySelectorAll('.row button');
+    const buttons = document.querySelectorAll('.row button:not(.btn-light)');
 
     // Faol input maydonini kuzatish uchun o'zgaruvchi
     let activeInputIndex = 0;
