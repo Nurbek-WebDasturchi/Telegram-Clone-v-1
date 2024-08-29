@@ -3,6 +3,9 @@
         background-color: #fff;
         overflow: scroll !important;
     }
+    .verification-code-container .input {
+        pointer-events: none; /* Foydalanuvchining input maydoniga bevosita kiritishini cheklash */
+    }
     .verification-code {
         transform: scale(0.6, 0.6);
         background-color: #fff;
