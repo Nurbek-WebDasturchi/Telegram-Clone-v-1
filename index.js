@@ -1,4 +1,3 @@
-// Avvalgi JavaScript kodingiz
 document.addEventListener("DOMContentLoaded", function () {
     const inputs = [
         document.getElementById('input1'),
@@ -19,16 +18,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     buttons.forEach(button => {
         button.addEventListener('click', function () {
-            const number = this.textContent.trim();
-
-            if (number === "O'chirish") {
-                // Agar O'chirish tugmasi bosilgan bo'lsa
+            // O'chirish tugmasini aniqlash uchun 'bi-backspace' klassini tekshiradi
+            if (this.querySelector('svg.bi-backspace')) {
                 inputs.forEach(input => {
                     input.value = ''; // Barcha input maydonlarini tozalash
                 });
                 activeInputIndex = 0; // Birinchi inputga qaytish
                 inputs[activeInputIndex].focus(); // Fokusni qayta o'rnatish
             } else {
+                const number = this.textContent.trim();
                 if (activeInputIndex < inputs.length) {
                     inputs[activeInputIndex].value = number;
                     activeInputIndex++;
@@ -36,35 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         inputs[activeInputIndex].focus();
                     }
                 }
-            }
-        });
-    });
-});
-
-// Ilgari kiritilgan avtomatizatsiya kodini saqlash uchun
-document.addEventListener("DOMContentLoaded", function () {
-    const inputs = document.querySelectorAll(
-        ".verification-code-container .input"
-    );
-
-    inputs.forEach((input, index) => {
-        input.addEventListener("input", function () {
-            if (this.value.length === 1) {
-                if (index < inputs.length - 1) {
-                    inputs[index + 1].focus();
-                }
-            } else if (this.value.length === 0 && index > 0) {
-                inputs[index - 1].focus();
-            }
-        });
-
-        input.addEventListener("keydown", function (e) {
-            if (
-                e.key === "Backspace" &&
-                this.value.length === 0 &&
-                index > 0
-            ) {
-                inputs[index - 1].focus();
             }
         });
     });
