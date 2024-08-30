@@ -3,19 +3,20 @@
         background-color: #fff;
         overflow: scroll !important;
     }
-    .verification-code-container .input {
-        pointer-events: none; /* Foydalanuvchining input maydoniga bevosita kiritishini cheklash */
-    }
     .verification-code {
-        transform: scale(0.6, 0.6);
+        transform: scale(0.8, 0.8);
         background-color: #fff;
         position: relative;
         top: -200px;
     }
+    img {
+        transform: scale(0.7, 0.7);
+    }
     .verification-code h2 {
         color: black;
-        font-size: 23px;
+        font-size: 24px;
         text-align: center;
+        font-weight: 600;
     }
     .verification-code p {
         font-size: 18px;
@@ -24,6 +25,9 @@
     .verification-code-container .input {
         background-color: #fff;
         color: black; /* Matn rangini qora qilib qo'ydik */
+    }
+    .btn-custom {
+        background-color: #b8b8bd;
     }
 }
 @media (min-width: 768px) {
