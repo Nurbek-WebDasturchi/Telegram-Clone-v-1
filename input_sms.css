@@ -30,7 +30,11 @@
         color: black; /* Matn rangini qora qilib qo'ydik */
     }
     .btn-custom {
-        background-color: #b8b8bd;
+        background-color: gainsboro;
+        font-size: 22px;
+        font-weight: 500;
+        padding: auto;
+        transform: scale(0.97, 1.1);
     }
 }
 @media (min-width: 768px) {
@@ -86,25 +90,4 @@ body {
 }
 .verification-code-container .input:focus {
     border-color: #007bff;
-}
-.button-container {
-    text-align: center;
-}
-.button-container button {
-    width: 100%;
-    transform: scaleY(0.8);
-    font-size: 15px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    padding: 10px 30px;
-    border-radius: 5px;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    color: #fff;
-    background-color: #007bff;
-    transition: all 0.3s ease;
-}
-.button-container button:hover {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
